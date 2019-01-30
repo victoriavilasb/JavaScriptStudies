@@ -1,9 +1,19 @@
+:root {
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
 html,
 body {
   margin: 0;
   display: block;
   padding: 0;
   height: 100vh;
+  background-color: #193549;
+  font-family: 'heuvetica neue', sans-serif;
+  color: white;
+  font-size: 1.3rem;
 }
 
 .app {
@@ -13,4 +23,15 @@ body {
 
 .main-img {
   margin-top: 20px;
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur))
+}
+
+.h1 {
+  color: var(--base)
+}
+
+input {
+  width: 100px;
 }
