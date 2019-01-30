@@ -1,0 +1,16 @@
+html,
+body {
+  margin: 0;
+  display: block;
+  padding: 0;
+  height: 100vh;
+}
+
+.app {
+  text-align: center;
+  padding: 30px;
+}
+
+.main-img {
+  margin-top: 20px;
+}
