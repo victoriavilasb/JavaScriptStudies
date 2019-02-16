@@ -36,11 +36,34 @@
     const firstAndLast = inventors.map(inventor => {
       return `${inventor.first} ${inventor.last}`
     })
+
+    
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+    const oldestToYoungest = inventors.sort((inventor1, inventor2) => {
+      if(inventor1.year > inventor2.year)
+        return -1
+      else
+        return 1
+    }) 
+
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
+    const totalYears = inventors.reduce((initial, inventor) => {
+      return initial = initial + (inventor.passed - inventor.year) 
+    },0)
+
     // 5. Sort the inventors by years lived
+    const livedMore = inventors.sort((inventor1, inventor2) => {
+      let age1 = inventor1.passed-inventor1.year
+      let age2 = inventor2.passed-inventor2.year
+
+      if (age1 > age2)
+        return -1
+      else 
+        return 1
+      return 0
+    })
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
     // 7. sort Exercise
